@@ -1,6 +1,6 @@
 {
     "name": "daun/statamic-original-filename",
-    "description": "Remember the original filename of assets uploaded in Statamic",
+    "description": "Remember the original filenames of assets uploaded in Statamic",
     "license": "MIT",
     "type": "statamic-addon",
     "keywords": [
@@ -62,7 +62,7 @@
             ]
         },
         "statamic": {
-            "description": "Remember the original, unsanitized filename of uploaded assets",
+            "description": "Remember the original, unsanitized filenames of uploaded assets",
             "name": "Original Filename"
         }
     },
