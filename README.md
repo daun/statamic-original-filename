@@ -1,11 +1,10 @@
 # Statamic Original Filename
 
-**Remember the original, unsanitized filename of assets uploaded in Statamic.**
+**Remember the original, unsanitized filenames of assets uploaded in Statamic.**
 
 This addon stores the original filename of uploaded assets in their metadata, allowing later
-access even after Statamic has sanitized and modified the filename for compatibility. Useful for
-scenarios where the original filename is needed, such as displaying it to users or allowing
-downloads with the original name.
+access even after Statamic has sanitized the filename for compatibility. Useful for allowing
+downloads with the original name or displaying the original name to editors.
 
 - Filename as uploaded: `Long-Tailed Duck © Ray Hennessy.jpg`
 - Filename as sanitized: `long-tailed-duck-ray-hennessy.jpg`
