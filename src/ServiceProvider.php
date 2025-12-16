@@ -7,6 +7,6 @@ use Statamic\Providers\AddonServiceProvider;
 class ServiceProvider extends AddonServiceProvider
 {
     protected $subscribe = [
-        Subscribers\AssetUploadSubscriber::class,
+        Subscribers\UploadSubscriber::class,
     ];
 }

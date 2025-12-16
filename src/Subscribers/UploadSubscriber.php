@@ -7,7 +7,7 @@ use Statamic\Assets\Asset;
 use Statamic\Events\AssetReuploaded;
 use Statamic\Events\AssetUploaded;
 
-class AssetUploadSubscriber
+class UploadSubscriber
 {
     public function subscribe(): array
     {
