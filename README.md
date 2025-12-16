@@ -19,7 +19,7 @@ composer require daun/statamic-original-filename
 ## Usage
 
 Once installed, the addon will store the original filename of each uploaded asset in its
-metadata under the key `original_filename`.
+metadata under the key `original_filename`. The filename is saved without the file extension.
 
 ### Frontend
 
