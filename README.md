@@ -4,11 +4,11 @@
 
 This addon stores the original filename of uploaded assets in their metadata, allowing later
 access even after Statamic has sanitized the filename for compatibility. Useful for allowing
-downloads with the original name or displaying the original name to editors.
+downloads with the original name or using it as a worst-case alt text for images.
 
-- Filename as uploaded: `Long-Tailed Duck © Ray Hennessy.jpg`
-- Filename as sanitized: `long-tailed-duck-ray-hennessy.jpg`
-- Original filename: `Long-Tailed Duck © Ray Hennessy`
+- Filename as uploaded: `Fauvette à tête noire © Jean Dupont.jpg`
+- Filename as sanitized: `fauvette-a-tete-noire-jean-dupont.jpg`
+- Original filename: `Fauvette à tête noire © Jean Dupont`
 
 ## Installation
 
@@ -23,11 +23,21 @@ metadata under the key `original_filename`. The filename is saved without the fi
 
 ### Frontend
 
+To offer downloads using the original filename:
+
 ```antlers
 {{ asset }}
   <a href="{{ url }}" download="{{ original_filename }}.{{ extension }}">
     Download {{ original_filename }}
   </a>
+{{ /asset }}
+```
+
+To use the original filename as fallback alt text for images:
+
+```antlers
+{{ asset }}
+  <img src="{{ url }}" alt="{{ alt ?? original_filename }}">
 {{ /asset }}
 ```
 
