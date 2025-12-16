@@ -1,0 +1,77 @@
+{
+    "name": "daun/statamic-original-filename",
+    "description": "Remember the original filename of assets uploaded in Statamic",
+    "license": "MIT",
+    "type": "statamic-addon",
+    "keywords": [
+        "statamic",
+        "assets"
+    ],
+    "authors": [
+        {
+            "name": "Philipp Daun",
+            "email": "post@philippdaun.net",
+            "homepage": "https://philippdaun.net",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/daun/statamic-original-filename",
+    "support": {
+        "email": "post@philippdaun.net"
+    },
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^10.0 || ^11.0 || ^12.0",
+        "statamic/cms": "^4.0 || ^5.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^2.9 || ^3.0",
+        "laravel/pint": "^1.14",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^9.5 || ^10.0",
+        "pestphp/pest": "^3.3",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "spatie/ray": "^1.42"
+    },
+    "autoload": {
+        "psr-4": {
+            "Daun\\StatamicOriginalFilename\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "pixelfear/composer-dist-plugin": true
+        },
+        "audit": {
+            "block-insecure": false
+        },
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Daun\\StatamicOriginalFilename\\ServiceProvider"
+            ]
+        },
+        "statamic": {
+            "description": "Remember the original, unsanitized filename of uploaded assets",
+            "name": "Original Filename"
+        }
+    },
+    "scripts": {
+        "analyse": "./vendor/bin/phpstan analyse --memory-limit=2G",
+        "format": "./vendor/bin/pint",
+        "lint": "./vendor/bin/pint --test",
+        "test": "./vendor/bin/pest",
+        "test:ci": "./vendor/bin/pest --coverage-clover coverage.xml",
+        "test:coverage": "./vendor/bin/pest --coverage"
+    }
+}
