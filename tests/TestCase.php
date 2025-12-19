@@ -5,7 +5,6 @@ namespace Tests;
 use Daun\StatamicOriginalFilename\ServiceProvider as AddonServiceProvider;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Statamic\Extend\Manifest;
 use Statamic\Providers\StatamicServiceProvider;
 use Statamic\Statamic;
 use Tests\Concerns\DealsWithAssets;
@@ -95,7 +94,11 @@ abstract class TestCase extends OrchestraTestCase
         $statamic = $json['extra']['statamic'] ?? [];
         $autoload = $json['autoload']['psr-4'][$namespace.'\\'];
 
-        $app->make(Manifest::class)->manifest = [
+        $manifestClass = class_exists('\Statamic\Addons\Manifest')
+            ? \Statamic\Addons\Manifest::class
+            : \Statamic\Extend\Manifest::class;
+
+        $app->make($manifestClass)->manifest = [
             $json['name'] => [
                 'id' => $json['name'],
                 'slug' => $statamic['slug'] ?? null,
