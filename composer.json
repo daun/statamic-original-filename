@@ -21,7 +21,7 @@
     },
     "require": {
         "php": "^8.2",
-        "statamic/cms": "^5.70 || ^6.0"
+        "statamic/cms": "^5.70 || ^6.0@alpha"
     },
     "require-dev": {
         "larastan/larastan": "^2.9 || ^3.0",
