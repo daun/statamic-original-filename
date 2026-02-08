@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1] - 2026-02-08
+
+- Require Statamic from stable version
+
 ## [1.1.0] - 2025-12-19
 
 - Add Statamic 6 compatibility
@@ -12,6 +16,7 @@
 
 - Initial release
 
+[1.1.1]: https://github.com/daun/statamic-original-filename/releases/tag/1.1.1
 [1.1.0]: https://github.com/daun/statamic-original-filename/releases/tag/1.1.0
 [1.0.1]: https://github.com/daun/statamic-original-filename/releases/tag/1.0.1
 [1.0.0]: https://github.com/daun/statamic-original-filename/releases/tag/1.0.0
