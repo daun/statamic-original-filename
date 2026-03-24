@@ -13,9 +13,12 @@ jobs:
       fail-fast: true
       matrix:
         php: [8.4, 8.3, 8.2]
-        laravel: [12.*, 11.*, 10.*]
+        laravel: [13.*, 12.*, 11.*, 10.*]
         statamic: [6.x, 5.*]
         include:
+          - laravel: 13.*
+            testbench: 11.*
+            pest: 4.*
           - laravel: 12.*
             testbench: 10.*
             pest: 3.*
@@ -26,8 +29,8 @@ jobs:
             testbench: 8.*
             pest: 2.*
         exclude:
-          - statamic: 4.*
-            laravel: 12.*
+          - statamic: 5.*
+            laravel: 13.*
 
     name: PHP ${{ matrix.php }} / Laravel ${{ matrix.laravel }} / Statamic ${{ matrix.statamic }}
 
