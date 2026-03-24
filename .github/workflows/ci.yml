@@ -14,7 +14,7 @@ jobs:
       matrix:
         php: [8.5, 8.4, 8.3, 8.2]
         laravel: [13.*, 12.*, 11.*, 10.*]
-        statamic: [6.x, 5.*]
+        statamic: [6.*, 5.*]
         include:
           - laravel: 13.*
             testbench: 11.*
