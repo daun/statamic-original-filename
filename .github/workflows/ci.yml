@@ -31,6 +31,8 @@ jobs:
         exclude:
           - statamic: 5.*
             laravel: 13.*
+          - php: 8.2
+            laravel: 13.*
 
     name: PHP ${{ matrix.php }} / Laravel ${{ matrix.laravel }} / Statamic ${{ matrix.statamic }}
 
